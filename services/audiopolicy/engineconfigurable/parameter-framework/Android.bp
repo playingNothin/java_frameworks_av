@@ -18,18 +18,24 @@
 
 prebuilt_etc {
     name: "PolicyClass.xml",
+    // Moto G20 (java): stock parameter-framework Structure tree ships as blobs
+    enabled: false,
     vendor: true,
     src: ":PolicyClass",
     sub_dir: "parameter-framework/Structure/Policy",
 }
 prebuilt_etc {
     name: "PolicySubsystem.xml",
+    // Moto G20 (java): stock parameter-framework Structure tree ships as blobs
+    enabled: false,
     vendor: true,
     src: ":PolicySubsystem",
     sub_dir: "parameter-framework/Structure/Policy",
 }
 prebuilt_etc {
     name: "PolicySubsystem-CommonTypes.xml",
+    // Moto G20 (java): stock parameter-framework Structure tree ships as blobs
+    enabled: false,
     vendor: true,
     src: ":buildcommontypesstructure_gen",
     sub_dir: "parameter-framework/Structure/Policy",

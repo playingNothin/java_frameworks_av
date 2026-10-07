@@ -98,6 +98,8 @@ cc_binary {
 
 cc_binary {
     name: "android.hardware.drm@1.3-service.clearkey",
+    // Moto G20 (java): stock Unisoc drm service blob replaces this HAL service
+    enabled: false,
     defaults: ["clearkey_service_defaults"],
     srcs: ["service.cpp"],
     init_rc: ["android.hardware.drm@1.3-service.clearkey.rc"],
@@ -106,6 +108,8 @@ cc_binary {
 
 cc_binary {
     name: "android.hardware.drm@1.3-service-lazy.clearkey",
+    // Moto G20 (java): stock Unisoc drm service blob replaces this HAL service
+    enabled: false,
     overrides: ["android.hardware.drm@1.3-service.clearkey"],
     defaults: ["clearkey_service_defaults"],
     srcs: ["serviceLazy.cpp"],

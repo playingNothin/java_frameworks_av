@@ -354,8 +354,8 @@ sp<DeviceDescriptor> HwModuleCollection::createDevice(const audio_devices_t type
 {
     sp<HwModule> hwModule = getModuleForDeviceType(type, encodedFormat);
     if (hwModule == 0) {
-        ALOGE("%s: could not find HW module for device %04x address %s", __FUNCTION__, type,
-              address);
+        ALOGE("%s: could not find HW module for device %04x address %s encodedFormat=%08x",
+              __FUNCTION__, type, address, encodedFormat);
         return nullptr;
     }
 

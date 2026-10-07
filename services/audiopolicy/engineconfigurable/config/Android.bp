@@ -16,8 +16,12 @@
 
 // Root soong_namespace for common components
 
+// Moto G20 (java): the vendor audio_policy_engine_criteria.xml comes from
+// the stock extraction (java-vendor.mk copy). This example module claimed
+// the same vendor/etc path and collided with it; it is unused
+// (not in any PRODUCT_PACKAGES), so it is renamed to stay out of the way.
 prebuilt_etc {
-    name: "audio_policy_engine_criteria.xml",
+    name: "audio_policy_engine_criteria_example_unused.xml",
     vendor: true,
     src: ":audio_policy_engine_criteria",
 }
